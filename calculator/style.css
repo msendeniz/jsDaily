@@ -1,0 +1,97 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background: #1C1C1C; /* updated background color */
+    display: flex;
+    font-family: 'Dosis', sans-serif;
+    height: inherit;
+    justify-content: center;
+}
+
+.wrapper {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    flex-basis: 400px;
+    height: 540px;
+    padding: 20px 35px;
+}
+
+.screen {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    overflow: auto;
+    padding: 20px;
+    font-size: 35px;
+    text-align: right;
+    width: 326px;
+}
+
+.calc-button-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+.calc-button {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: #505050; /* button color */
+    border: 1px solid rgba(35, 35, 35, 0.1);
+    border-radius: 50%; /* making buttons rounder */
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: white; /* font color for buttons */
+    flex-basis: 21%; /* adjust button size */
+    font-family: inherit;
+    font-size: 24px;
+    height: 65px;
+}
+
+/* Adjust the size for 'C' and '0' buttons */
+.double {
+    flex-basis: 50%; /* Adjusting the size */
+    border-radius: 58%;
+}
+.triple{
+    flex-basis: 50%;
+}
+.double {
+    background: #D4D4D2; /* AC button color */
+    color: black; /* AC button font color */
+}
+
+.calc-button:last-child {
+    background: #FF9500; /* color for rightmost column */
+}
+
+.calc-button:not(.double) {
+    color: white; /* ensuring all buttons except AC have white text */
+}
+
+.calc-button:last-child:hover{
+    background-color: inherit;
+    color: black;
+}
+
+.calc-button:active{
+    background-color: #ffef78;
+}
